@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+header h1 {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

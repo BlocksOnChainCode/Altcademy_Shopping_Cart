@@ -1,0 +1,14 @@
+@mixin centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  @include centerContent();
+  background-color: black;
+
+  h1 {
+    color: white;
+  }
+}

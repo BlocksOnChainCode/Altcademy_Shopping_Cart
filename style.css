@@ -1,9 +1,18 @@
-header {
+h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 20px;
 }
-header h1 {
-  color: white;
+
+.item-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qty-list input {
+  width: 50px;
 }/*# sourceMappingURL=style.css.map */

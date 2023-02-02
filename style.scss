@@ -4,11 +4,17 @@
   align-items: center;
 }
 
-header {
+h1 {
   @include centerContent();
-  background-color: black;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 20px;
+}
 
-  h1 {
-    color: white;
-  }
+.item-row {
+  @include centerContent();
+}
+
+.qty-list input {
+  width: 50px;
 }

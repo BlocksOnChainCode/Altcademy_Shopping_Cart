@@ -51,22 +51,40 @@ $(document).ready(function() {
     $(item).find(".item-total-list p").text(subtotal + "$");
   }
 
+  function updateTotalPrice() {
+    let totalPrice = 0;
+    let subtotals = $(".item-total-list p");
+
+    subtotals.each(function(index, subtotal) {
+      totalPrice += parseFloat($(subtotal).text());
+    });
+  
+    $("#total-price").text(totalPrice.toFixed(2) + "$");
+  }
+
+  $(".item-total-list p").on("change", updateTotalPrice);
+
   // trigger the updateSubtotal function on change of the input value
   $(".qty-list input").on("change", function() {
     updateSubtotal($(this).closest(".item-row"));
+    updateTotalPrice();
   });
+  
+  $(document).on("change", ".qty-list input", function() {
+    let price = parseFloat($(this).closest(".item-row").find(".price-item").text());
+    let quantity = parseInt($(this).val());
+    let subtotal = price * quantity;
+  
+    $(this).closest(".item-row").find(".item-total-list p").text(subtotal.toFixed(2));
+    updateTotalPrice();
+  });
+
+  $(document).on("click", ".btn-warning", function() {
+    // Remove the row that contains the remove button that was clicked
+    $(this).closest(".item-row").remove();
+    updateTotalPrice()
+    });
 });
 
-$(document).on("change", ".qty-list input", function() {
-  let price = parseFloat($(this).closest(".item-row").find(".price-item").text());
-  let quantity = parseInt($(this).val());
-  let subtotal = price * quantity;
 
-  $(this).closest(".item-row").find(".item-total-list p").text(subtotal.toFixed(2));
-});
 
-// Remove item function
-$(document).on("click", ".btn-warning", function() {
-  // Remove the row that contains the remove button that was clicked
-  $(this).closest(".item-row").remove();
-  });

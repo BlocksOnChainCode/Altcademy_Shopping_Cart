@@ -30,16 +30,16 @@
     <hr>
 
     <div class="row item-row">
-      <div class="col-4 item-list">
+      <div class="col-4">
         <h2>Name</h2>
       </div>
-      <div class="col-4 price-list">
+      <div class="col-4">
         <h2>Price</h2>
       </div>
-      <div class="col-2 qty-list">
+      <div class="col-2">
         <h2>Quantity</h2>
       </div>
-      <div class="col-2 item-total_list">
+      <div class="col-2">
         <h2>SubTotal</h2>
       </div>
     </div>
@@ -51,33 +51,28 @@
           <li class="item">Grapes</li>
         </ul>
       </div>
-      <div class="col-4 price-list">
-        <ul>
-          <li>$3/kg</li>
+      <div class="col-4">
+        <ul class="price-list">
+          <li class="price-item"> 03.00</li>
         </ul>
       </div>
       <div class="col-2 qty-list">
         <div class="d-flex">
-          <input type="text">
-          <button>Check</button>
+          <input type="text" value="0">
+          <button class="btn btn-warning">Delete</button>
         </div>
       </div>
-      <div class="col-2 item-total_list">
-        <p> 30$ </p>
+      <div class="col-2 item-total-list">
+        <p></p>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-4">
-        <input type="text">
-      </div>
-      <div class="col-4">
-        <input type="text">
-      </div>
-      <div class="col">
-        <button class="btn">Create</button>
-      </div>
-  
+    <div class="row position-absolute sticky-bottom">
+      <div class="col-12">
+        <input type="text" placeholder="Name:">
+        <input type="text" placeholder="Price:">
+        <button id="create-button" class="btn btn-success">Create</button>
+      </div>  
     </div>
 
   </div>

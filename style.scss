@@ -1,20 +1,59 @@
+/** 
+* ?   A Mixin is in it's essence a reusable set of css rules.
+* !   Keep the mixins rather small. 
+*
+* TODO   analyse my SCSS to see if any duplicate rules can be turned into a *        mixin 
+*/
 @mixin centerContent {
   display: flex;
-  justify-content: center;
+  flex-direction: column;;
+  justify-content: center;;
   align-items: center;
 }
 
-h1 {
+body {
+  background: #161313;
+ 
+}
+header {
+  @include centerContent();
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+  border-radius: 25px 25px 0 0;
+  border: solid 1px gray;;
+  background: rgb(209,84,31);
+  background: linear-gradient(234deg, rgba(209,84,31,1) 0%, rgba(245,155,71,1) 18%, rgba(183,145,109,1) 100%);
+}
+
+.table {
+  width: 80%;
+  margin-left: 10%;
+  background: rgb(209,84,31);
+  background: linear-gradient(234deg, rgba(209,84,31,1) 0%, rgba(245,155,71,1) 18%, rgba(183,145,109,1) 100%);
+  border: 2px solid gray;
+  border-radius: 0 0 25px 25px;
+}
+
+#create-item-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  
+  background-color:#161313;
+}
+
+#plusButton {
   @include centerContent();
   font-size: 50px;
-  font-weight: 600;
-  margin-top: 20px;
-}
-
-.item-row {
-  @include centerContent();
-}
-
-.qty-list input {
   width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid;
+  background-image: linear-gradient(234deg, rgba(209,84,31,1) 0%, rgba(245,155,71,1) 18%, rgba(183,145,109,1) 100%);
+  border: 5px solid;
+  background-color: transparent;
+
+  border-radius: 50%;
 }

@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+
   <!--Underscore-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
   <!--JQuery-->
@@ -13,7 +16,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
   </script>
-
+  
   <!--CSS (compiled from SCSS)-->
   <link rel="stylesheet" href="style.css">
   <title>Shopping Cart</title>
@@ -21,17 +24,21 @@
 <body>
 
   <header>
-    <h1 class="">Shopping Cart</h1>
+    
   </header>
 
   <!--Table-->
   <table class="table">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Subtotal</th>
+        <th colspan="5"><h1 class="">Shopping Cart</h1></th>
+      </tr>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Subtotal</th>
+        <th scope="col"><i class="fa-solid fa-trash"></i></th>
       </tr>
     </thead>
     <tbody>
@@ -94,13 +101,16 @@
   
   <div id="create-item-form">
     <form>
-      <input type="text" name="name" placeholder="name">
-      <input type="number" name="price" placeholder="price">
-      <button class="add">Add</button>
+      <input type="text" name="name" placeholder="Name:">
+      <input type="number" name="price" placeholder="Price:">
+      <button id="add-button">Add</button>
     </form>
+    <div>
+      <button id="plusButton">+</button>
+    </div>
   </div>
   <div>
-    <button id="plusButton">+</button>
+    <h1 id="total-price">Total</h1>
   </div>
   <script src="./main.js"></script>
 </body>

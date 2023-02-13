@@ -4,9 +4,63 @@
 *
 * TODO   analyse my SCSS to see if any duplicate rules can be turned into a *        mixin 
 */
+
+tr {
+  border-bottom: gray;
+}
+
+table {
+  width: 100vw;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.table thead th {
+  background-color: #f7f7f7;
+}
+
+input[type="number"],
+input[type="text"]
+ {
+  width: 5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#create-item-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#create-item-form input[type="text"],
+#create-item-form input[type="number"] {
+  width: 20%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+/*
 @mixin centerContent {
   display: flex;
-  flex-direction: column;;
   justify-content: center;;
   align-items: center;
 }
@@ -15,21 +69,11 @@ body {
   background: #161313;
  
 }
-header {
-  @include centerContent();
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 20px;
-  border-radius: 25px 25px 0 0;
-  border: solid 1px gray;;
-  background: rgb(209,84,31);
-  background: linear-gradient(234deg, rgba(209,84,31,1) 0%, rgba(245,155,71,1) 18%, rgba(183,145,109,1) 100%);
-}
+
 
 .table {
-  width: 80%;
-  margin-left: 10%;
-  background: rgb(209,84,31);
+  margin: 0 auto;
+  //background: rgb(209,84,31);
   background: linear-gradient(234deg, rgba(209,84,31,1) 0%, rgba(245,155,71,1) 18%, rgba(183,145,109,1) 100%);
   border: 2px solid gray;
   border-radius: 0 0 25px 25px;
@@ -56,4 +100,4 @@ header {
   background-color: transparent;
 
   border-radius: 50%;
-}
+}*/

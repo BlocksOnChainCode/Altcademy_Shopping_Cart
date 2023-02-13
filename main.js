@@ -9,7 +9,7 @@ $('#add-button').click(function(element) {
   element.preventDefault();
     var itemName = $("input[placeholder='Name:']").val();
     var itemPrice = $("input[placeholder='Price:']").val();
-      console.log("add item triggered")
+      //console.log("add item triggered")
 
   $("tbody").append(`
     <tr> 
@@ -17,10 +17,10 @@ $('#add-button').click(function(element) {
       ${itemName} 
       </td> 
       <td class="price"> 
-      ${itemPrice} 
+      ${itemPrice + "$"} 
       </td>
       <td class="qty"><input type="number" value="0"></td> 
-      <td class="total"></td>
+      <td class="total">0.00$</td>
       <td><button class="remove">remove</button></td> 
     </tr>
   `);
@@ -32,7 +32,6 @@ $(document).ready(function() {
 
   function updateSubtotal(item) {
     let input = $(item).find(".qty input");
-    //let price = $(item).find(".price").text();
     let price = parseFloat($(item).find(".price").text());
       
     let subtotal = input.val() * price;
@@ -44,21 +43,16 @@ $(document).ready(function() {
     let totalPrice = 0;
     let subtotals = $(".total");
       //console.log(subtotals);
-      console.log(totalPrice);
-
-      subtotals.each(function(index, subtotal) {
-        let value = parseFloat($(subtotal).text());
-        if (!isNaN(value)) {
-          totalPrice += value;
-        }
-      });
-    /*  
+      
     subtotals.each(function(index, subtotal) {
-      totalPrice += parseFloat($(subtotal).text());
-      console.log(totalPrice);
-    });*/
-  
-    $("#total-price").text(totalPrice.toFixed(2) + "$");
+      let value = parseFloat($(subtotal).text());
+      if (!isNaN(value)) {
+        totalPrice += value;
+      }
+      //console.log(totalPrice);
+    });
+
+    $("#total-price").text("Total: " + totalPrice.toFixed(2) + "$");
   }
 
   $("tr").on("change", updateTotalPrice);

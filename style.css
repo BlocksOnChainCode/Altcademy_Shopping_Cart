@@ -8,39 +8,26 @@ table {
   width: 100vw;
 }
 table th {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   background-color: #f7f7f7;
   padding: 1rem;
   border-radius: 0.5rem;
 }
 table th h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 table td {
-  font-size: 1rem;
+  font-size: 1.25rem;
   padding: 1rem;
   border-radius: 0.5rem;
 }
-
-input[type=number],
-input[type=text] {
+table input[type=number],
+table input[type=text] {
   width: 5rem;
   padding: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   text-align: center;
-  border: 1px solid #e2e2e2;
-  border-radius: 10px;
-  box-shadow: 0px 0px 2px #ccc;
-}
-
-button {
-  padding: 0.5rem 1rem;
-  background-color: #2196f3;
-  color: #fff;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
   border: 1px solid #e2e2e2;
   border-radius: 10px;
   box-shadow: 0px 0px 2px #ccc;
@@ -57,11 +44,9 @@ button {
   box-shadow: 0px 0px 10px #ccc;
   width: 75%;
 }
-#create-item-form #plusButton {
-  margin: 1rem;
-  font-size: 25px;
+#create-item-form h1 {
+  font-size: 3rem;
 }
-
 #create-item-form input[type=text],
 #create-item-form input[type=number] {
   width: 20%;
@@ -69,4 +54,20 @@ button {
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   margin-right: 1rem;
+}
+#create-item-form #plusButton {
+  margin: 1rem;
+  font-size: 25px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px #ccc;
 }/*# sourceMappingURL=style.css.map */
